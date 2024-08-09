@@ -1,0 +1,12 @@
+syntax = "proto3";
+package testchain.testchain;
+
+option go_package = "testchain/x/testchain/types";
+
+message Post {
+  
+  string title = 1; 
+  string body = 2; 
+  string creator = 3; 
+  uint64 id = 4; 
+}
