@@ -11,11 +11,11 @@ const (
 	MemStoreKey = "mem_testchain"
 
 	// PostKey is used to uniquely identify posts within the system.
-    // It will be used as the beginning of the key for each post, followed bei their unique ID
-    PostKey = "Post/value/"
+	// It will be used as the beginning of the key for each post, followed bei their unique ID
+	PostKey = "Post/value/"
 
-    // This key will be used to keep track of the ID of the latest post added to the store.
-    PostCountKey = "Post/count/"
+	// This key will be used to keep track of the ID of the latest post added to the store.
+	PostCountKey = "Post/count/"
 )
 
 var (
@@ -25,5 +25,3 @@ var (
 func KeyPrefix(p string) []byte {
 	return []byte(p)
 }
-
-
