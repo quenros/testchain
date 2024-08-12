@@ -5,6 +5,10 @@ accounts:
   coins:
   - 20000token
   - 200000000stake
+  config:
+    consensus:
+      timeout_commit: "12s"
+      timeout_propose: "12s"
 - name: bob
   coins:
   - 10000token
@@ -18,5 +22,13 @@ faucet:
   - 5token
   - 100000stake
 validators:
-- name: alice
-  bonded: 100000000stake
+  - name: alice
+    bonded: '100000000stake'
+    app:
+      minimum-gas-prices: "0.025stake"
+    config:
+      consensus:
+        timeout_commit: "5s"
+        timeout_propose: "5s"
+    client:
+      output: "json"
